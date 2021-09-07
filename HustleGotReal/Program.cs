@@ -10,14 +10,10 @@ namespace HustleGotReal
     {
         static void Main(string[] args)
         {
-            WebDriverClass launch = new WebDriverClass();
-            launch.startBrowser();
             LoginCredentials login = new LoginCredentials();
-            login.Login();
-            SelectValue value = new SelectValue();
-            value.selectValue();
-            Console.WriteLine(value);
-            launch.closeBrowser();
+            login.Launch(); 
+            login.Login(); 
+            Console.WriteLine(login.Value());
         }
     }
 }
